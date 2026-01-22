@@ -1,0 +1,11 @@
+{
+  "askResourcesVersion": "2020-03-31",
+  "profiles": {
+    "default": {
+      "skillMetadata": "./skill-package",
+      "code": {
+        "default": "./lambda"
+      }
+    }
+  }
+}

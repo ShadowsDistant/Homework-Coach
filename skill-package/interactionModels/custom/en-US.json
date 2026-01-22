@@ -1,0 +1,318 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "homework coach",
+      "intents": [
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "DailyPlanIntent",
+          "samples": [
+            "what's my plan for today",
+            "what's on my plate today",
+            "show me today's agenda",
+            "what assignments do I have",
+            "what homework do I need to do",
+            "check my daily plan",
+            "tell me my plan",
+            "what's due today"
+          ],
+          "slots": []
+        },
+        {
+          "name": "AddAssignmentIntent",
+          "samples": [
+            "add an assignment",
+            "add homework",
+            "add a new assignment",
+            "I have homework to add",
+            "add assignment in {ClassName} due {DueDate}",
+            "add {AssignmentTitle} in {ClassName} due {DueDate}",
+            "new assignment {AssignmentTitle} for {ClassName}",
+            "add {AssignmentTitle} for {ClassName}",
+            "I have to do {AssignmentTitle} in {ClassName}",
+            "add a {DueDate} assignment in {ClassName}"
+          ],
+          "slots": [
+            {
+              "name": "AssignmentTitle",
+              "type": "AMAZON.AlphaNumeric"
+            },
+            {
+              "name": "ClassName",
+              "type": "AMAZON.AlphaNumeric"
+            },
+            {
+              "name": "DueDate",
+              "type": "AMAZON.Date"
+            },
+            {
+              "name": "EstimatedMinutes",
+              "type": "AMAZON.Number"
+            }
+          ]
+        },
+        {
+          "name": "StartPomodoroIntent",
+          "samples": [
+            "start a Pomodoro",
+            "start a Pomodoro session",
+            "start a Pomodoro in {Subject}",
+            "start a 25 minute study session in {Subject}",
+            "let's do a Pomodoro",
+            "I want to study {Subject}",
+            "start a focus session on {Subject}",
+            "begin a Pomodoro for {Subject}",
+            "I'm going to study {Subject}"
+          ],
+          "slots": [
+            {
+              "name": "Subject",
+              "type": "AMAZON.AlphaNumeric"
+            }
+          ]
+        },
+        {
+          "name": "PomodoroControlIntent",
+          "samples": [
+            "pause",
+            "pause my timer",
+            "pause the timer",
+            "resume",
+            "resume my timer",
+            "keep going",
+            "how much time is left",
+            "how long",
+            "stop",
+            "end Pomodoro",
+            "I'm done",
+            "finish",
+            "extend my time",
+            "add 5 more minutes",
+            "give me {Minutes} more minutes"
+          ],
+          "slots": [
+            {
+              "name": "Minutes",
+              "type": "AMAZON.Number"
+            }
+          ]
+        },
+        {
+          "name": "QuizIntent",
+          "samples": [
+            "quiz me",
+            "quiz me in {Subject}",
+            "quiz me on {Subject}",
+            "I want to take a quiz",
+            "test me",
+            "test me in {Subject}",
+            "give me a micro quiz",
+            "ask me a question about {Subject}",
+            "let's do a mini quiz on {Subject}",
+            "start a quiz"
+          ],
+          "slots": [
+            {
+              "name": "Subject",
+              "type": "AMAZON.AlphaNumeric"
+            }
+          ]
+        },
+        {
+          "name": "QuizResponseIntent",
+          "samples": [
+            "{Answer}",
+            "my answer is {Answer}",
+            "I think it's {Answer}",
+            "I'll say {Answer}",
+            "{Answer} is my guess",
+            "I believe {Answer}",
+            "{Answer} for sure",
+            "definitely {Answer}",
+            "the answer is {Answer}",
+            "pass",
+            "I don't know",
+            "skip this one",
+            "go to the next question"
+          ],
+          "slots": [
+            {
+              "name": "Answer",
+              "type": "AMAZON.AlphaNumeric"
+            }
+          ]
+        },
+        {
+          "name": "RecapIntent",
+          "samples": [
+            "what's my recap",
+            "end of day recap",
+            "how did I do today",
+            "give me a summary",
+            "summarize my day",
+            "recap",
+            "what did I accomplish today",
+            "how many Pomodoros did I do",
+            "how much time did I study"
+          ],
+          "slots": []
+        },
+        {
+          "name": "ViewAssignmentsIntent",
+          "samples": [
+            "list my assignments",
+            "show my homework",
+            "what assignments do I have",
+            "tell me my overdue assignments",
+            "what's overdue",
+            "show assignments due {DueDate}",
+            "which assignments are due soon"
+          ],
+          "slots": [
+            {
+              "name": "DueDate",
+              "type": "AMAZON.Date"
+            }
+          ]
+        },
+        {
+          "name": "MarkCompleteIntent",
+          "samples": [
+            "mark {AssignmentTitle} complete",
+            "I finished {AssignmentTitle}",
+            "done with {AssignmentTitle}",
+            "complete {AssignmentTitle}",
+            "I did {AssignmentTitle}",
+            "mark as done",
+            "check off {AssignmentTitle}"
+          ],
+          "slots": [
+            {
+              "name": "AssignmentTitle",
+              "type": "AMAZON.AlphaNumeric"
+            }
+          ]
+        },
+        {
+          "name": "ManageClassesIntent",
+          "samples": [
+            "add a class",
+            "add {ClassName} to my classes",
+            "new class {ClassName}",
+            "register {ClassName}",
+            "I'm taking {ClassName}",
+            "remove a class",
+            "list my classes",
+            "what classes do I have"
+          ],
+          "slots": [
+            {
+              "name": "ClassName",
+              "type": "AMAZON.AlphaNumeric"
+            }
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "SUBJECT_TYPE",
+          "values": [
+            {
+              "name": {
+                "value": "biology"
+              }
+            },
+            {
+              "name": {
+                "value": "algebra"
+              }
+            },
+            {
+              "name": {
+                "value": "history"
+              }
+            },
+            {
+              "name": {
+                "value": "english"
+              }
+            },
+            {
+              "name": {
+                "value": "chemistry"
+              }
+            },
+            {
+              "name": {
+                "value": "physics"
+              }
+            },
+            {
+              "name": {
+                "value": "spanish"
+              }
+            },
+            {
+              "name": {
+                "value": "french"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "AddAssignmentIntent",
+          "confirmationRequired": false,
+          "prompts": {
+            "elicitation": {
+              "AssignmentTitle": "What's the assignment called?",
+              "ClassName": "Which class is this for?",
+              "DueDate": "When is it due?",
+              "EstimatedMinutes": "How long do you think it will take?"
+            }
+          }
+        },
+        {
+          "name": "StartPomodoroIntent",
+          "confirmationRequired": false,
+          "prompts": {
+            "elicitation": {
+              "Subject": "What subject would you like to study?"
+            }
+          }
+        },
+        {
+          "name": "QuizIntent",
+          "confirmationRequired": false,
+          "prompts": {
+            "elicitation": {
+              "Subject": "Which subject should I quiz you on?"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

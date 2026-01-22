@@ -1,0 +1,43 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "A voice-first study partner for high school students",
+          "examplePhrases": [
+            "Alexa, open Homework Coach and check my daily plan",
+            "Alexa, ask Homework Coach to start a Pomodoro session in Biology",
+            "Alexa, ask Homework Coach to add an assignment due Friday",
+            "Alexa, ask Homework Coach to quiz me in History",
+            "Alexa, ask Homework Coach for today's recap"
+          ],
+          "name": "Homework Coach",
+          "description": "Your AI-powered study partner for high school. Homework Coach helps you organize daily assignments, practice focused Pomodoro sessions, build knowledge with spaced-repetition micro-quizzes, and track your daily productivity. Perfect for students juggling multiple classes and deadlines."
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Test the skill by invoking with 'Alexa, open Homework Coach'. Try: 1) Daily plan check-in, 2) Adding an assignment, 3) Starting a Pomodoro session, 4) Taking a quiz, 5) Requesting end-of-day recap."
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:REGION:ACCOUNT_ID:function:homework-coach-lambda"
+        }
+      }
+    },
+    "permissions": [
+      {
+        "name": "alexa::alerts:reminders:skill:readwrite"
+      }
+    ],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": true,
+      "privacyPolicyUrl": "https://example.com/privacy-policy",
+      "termsOfUseUrl": "https://example.com/terms-of-use"
+    }
+  }
+}

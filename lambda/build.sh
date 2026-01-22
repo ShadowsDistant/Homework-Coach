@@ -24,6 +24,10 @@ cp lambda_function.py "$BUILD_DIR/"
 cp -r handlers "$BUILD_DIR/"
 cp -r helpers "$BUILD_DIR/"
 
+# Copy skill package (for uploading to Alexa Console)
+echo "Copying skill package..."
+cp -r skill-package "$BUILD_DIR/"
+
 # Create deployment zip
 ZIP_FILE="homework-coach-lambda.zip"
 echo "Creating deployment package: $ZIP_FILE"
